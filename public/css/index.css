@@ -123,6 +123,10 @@ nav {
     }
 }
 
+#burn {
+    display: none;
+}
+
 #info {
     background: linear-gradient(-45deg, #000089, black, black, #000089);
     background-size: 400% 400%;
