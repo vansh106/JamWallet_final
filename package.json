@@ -1,0 +1,17 @@
+{
+  "name": "jamwallet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.2.1",
+    "express": "^4.18.1",
+    "nodemon": "^2.0.20",
+    "web3": "^1.8.0"
+  }
+}

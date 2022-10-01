@@ -1,0 +1,223 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat';
+    text-align: center;
+}
+
+#title {
+    background: linear-gradient(-45deg, #000089, black, black, #000089);
+    background-size: 400% 400%;
+    animation: gradient 4s ease infinite;
+    text-align: left;
+    color: #fff;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.creditCard{
+    position: relative;
+    right: -10%;
+    top: -60px;
+    width: 450px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 20px;
+    background: linear-gradient(-35deg, rgb(25, 140, 247), #fc3c68);
+    background-size: 400% 400%;
+    color:#fff;
+}
+
+.codin {
+    width: 100%;
+}
+
+.main-heading {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+}
+
+.container-fluid {
+    padding: 0% 5% 15% 5%;
+}
+
+h2 {
+    font-size: 2.5rem;
+    line-height: 1.5;
+}
+
+h3 {
+    font-weight: bolder;
+}
+
+p {
+    color: gray;
+}
+
+/* Navbar */
+
+nav {
+    margin-bottom: 15%;
+    position: fixed;
+}
+
+.navbar-brand {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.nav-item {
+    padding: 0 18px;
+}
+
+.dw_button {
+    margin: 5% 3% 5% 0;
+}
+
+/* features */
+
+#features {
+    padding: 7% 15%;
+    position: relative;
+}
+
+.ft {
+
+    padding: 5%;
+}
+
+.icon {
+    color: #54BAB9;
+    margin-bottom: 1.5rem;
+}
+
+.icon:hover {
+    color: #CDF0EA;
+}
+
+/* Testimonials */
+
+#abstract {
+    background: linear-gradient(-45deg, #000089, black, black, #000089);
+    background-size: 400% 400%;
+    animation: gradient 4s ease infinite;
+    color:#fff;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+#info {
+    background: linear-gradient(-45deg, #000089, black, black, #000089);
+    background-size: 400% 400%;
+    animation: gradient 4s ease infinite;
+    color:#fff;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+#jamcoin {
+    padding: 7% 15%;
+    position: relative;
+}
+
+.carousel-item {
+    padding: 7% 15%;
+}
+
+#press {
+    background-color: #CDF0EA;
+
+    padding-bottom: 6%;
+}
+
+#buyJamCoin {
+    padding-top: 5%;
+    overflow: hidden;
+}
+
+.press-logo {
+    width: 10%;
+    margin: 10px 20px;
+}
+
+
+
+.abstract-text {
+    margin-bottom: 3%;
+    font-size: 2.5rem;
+}
+
+/* pricing */
+
+#pricing {
+    padding: 100px;
+
+    margin: 2%;
+}
+
+.price-col {
+    padding: 3% 2%;
+}
+
+
+/* Footer */
+
+#footer {
+    padding: 2% 15%;
+
+
+}
+
+.footer-icon {
+    margin: 2%;
+    text-decoration: none;
+    color: black;
+}
+
+@media (max-width: 900px) {
+    #title {
+        text-align: center;
+    }
+
+    .testimonial-text {
+        font-size: 1.5rem;
+    }
+
+    .cta-h3 {
+        font-size: 1.75rem;
+    }
+
+    .pricing-text {
+        font-size: 1.75rem;
+    }
+
+    .btn {
+        font-size: 75%;
+    }
+}

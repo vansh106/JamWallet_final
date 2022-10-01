@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Jam Wallet</title>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/22563bbf83.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.2.7-rc.0/web3.min.js"
+    ></script>
+
+    <!-- bootstrap CDN -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/index.css" />
+  </head>
+
+  <body>
+    <section id="title">
+      <div class="container-fluid">
+        <!-- Nav Bar -->
+        <nav class="navbar navbar-light navbar-expand-lg">
+          <a class="navbar-brand" href="" style="color: #fff">JamWallet</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#features" style="color: #fff"
+                  >Features</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#abstract" style="color: #fff"
+                  >Abstract</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#jamcoin" style="color: #fff"
+                  >JamCoin</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  href="/"
+                  onclick="connectMetamask()"
+                  style="color: #fff"
+                  >Connect to Metamask</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  href="/"
+                  onclick="connectContract()"
+                  style="color: #fff"
+                  >Connect to contract</a
+                >
+              </li>
+              <li class="nav-item" id="bal">
+                <a
+                  class="nav-link active"
+                  href="/"
+                  onclick="balance()"
+                  style="color: #fff"
+                  >Balance</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <!-- Title -->
+
+        <div class="row">
+          <div class="col-lg-6">
+            <h1 class="main-heading">
+              Time to save your money through a friend.
+            </h1>
+            <button
+              type="button"
+              class="btn btn-dark btn-lg dw_button"
+              style="display: block"
+              id="transaction"
+              href="#"
+            >
+              Transaction
+            </button>
+          </div>
+          <div class="creditCard">
+            <p id="acnt" style="margin-top: 5px; color: #fff"></p>
+            <i
+              class="icon fa-solid fa fa-bitcoin fa-4x"
+              style="color: #fff; margin-top: 15%; margin-left: 45%"
+            ></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+
+    <section id="features">
+      <div class="row">
+        <div class="ft col-lg-4">
+          <i class="icon fa-solid fa fa-bitcoin fa-4x"></i>
+          <h3>Buy JamCoin</h3>
+          <p>You can mint JamCoin for your account.</p>
+        </div>
+
+        <div class="ft col-lg-4">
+          <i class="icon fa-solid fa-credit-card fa-4x"></i>
+          <h3>Transaction</h3>
+          <p>You can make transaction with other blockchain users.</p>
+        </div>
+
+        <div class="ft col-lg-4">
+          <i class="icon fa-solid fa-handshake-angle fa-4x"></i>
+          <h3>Nominee System</h3>
+          <p>Find your Friend to entrust your money after wallet lock.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Abstarct -->
+
+    <section id="abstract">
+      <div
+        id="carouselExampleFade"
+        class="carousel slide carousel-dark"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <h2 class="abstract-text">
+              "There is roughly 3 trillion dollars in the blockchain out of
+              which 180 billion dollars are lost due to inaccessibility."
+            </h2>
+          </div>
+          <div class="carousel-item">
+            <h2 class="abstract-text">
+              "JamWallet not only makes it easier to get money back but is super
+              interactive with the user."
+            </h2>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev btn-light"
+          type="button"
+          data-bs-target="#carouselExampleFade"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next btn-light"
+          type="button"
+          data-bs-target="#carouselExampleFade"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- JamCoin -->
+
+    <section id="jamcoin">
+      <div class="row">
+        <div class="ft col-lg-4">
+          <i class="icon fa-solid fa fa-money fa-4x"></i>
+          <h3>What is ERC20 Token?</h3>
+          <p>
+            It is the technical standard for fungible tokens created using the
+            Ethereum blockchain.
+          </p>
+        </div>
+
+        <div class="ft col-lg-4">
+          <i class="icon fa-solid fa fa-bitcoin fa-4x"></i>
+          <h3>What is JamCoin</h3>
+          <p>Our own fungible token for the utility of our users.</p>
+        </div>
+
+        <div class="ft col-lg-4">
+          <i class="icon fa-solid fas fa-donate fa-4x"></i>
+          <h3>Why JamCoin?</h3>
+          <p>
+            To give a community feel for all our users, where the utility is
+            measured on the happiness.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- info -->
+    
+    
+    <section id="info">
+        <div
+          id="carouselExampleFade"
+          class="carousel slide carousel-dark"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <h2 class="abstract-text">
+                "buyJamCoin function requires the number of coins to be minted into the account."
+              </h2>
+            </div>
+            <div class="carousel-item">
+              <h2 class="abstract-text">
+                "Transaction function is a simple to and from transact of coins. It requires the account to send to, the amount to be paid and 
+                finally the message to be send."
+              </h2>
+            </div>
+            <div class="carousel-item">
+                <h2 class="abstract-text">
+                  "Nominee system is the novel idea of our project. It requires the main account, verification account and the time 
+                  stamp value. After the interval, there is no activity from the user, then the system assumes the worst and moves the money from 
+                  the main account to the verification account."
+                </h2>
+            </div>
+          </div>
+          <button
+          class="carousel-control-prev btn-light"
+          type="button"
+          data-bs-target="#carouselExampleFade"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next btn-light"
+          type="button"
+          data-bs-target="#carouselExampleFade"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- buyJamCoin -->
+
+    <section id="buyJamCoin">
+        <div class="row mb-3">
+            <label for="number-of-coins" class="col-sm-2 col-form-label">Enter Number of Coins:</label>
+            <div class="col-sm-10">
+              <input type="number" class="form-control" id="JamCoin">
+            </div>
+        </div>
+        <button type="button" class="btn btn-dark" id="buyJamCoin" onclick="readContract()">Buy</button>        
+    </section>
+
+    <input type="text" placeholder="Account to" /><br />
+    <input type="text" placeholder="Amount" /><br />
+    <input type="text" placeholder="Message" /><br />
+    <button type="button" id="transact">Transaction</button><br />
+    <input type="text" placeholder="Enter Main Account" /><br />
+    <input type="text" placeholder="Enter Verification Account" /><br />
+    <input type="text" placeholder="Enter timer" /><br />
+    <button type="button" id="nominee">Activate!!</button>
+
+    <!--footer-->
+
+    <footer id="footer">
+      <a href="/"><i class="footer-icon fa-brands fa-twitter"></i></a>
+      <a href="/"><i class="footer-icon fa-brands fa-instagram"></i></a>
+      <a href="/"><i class="footer-icon fa-brands fa-github"></i></a>
+      <a href="/"><i class="footer-icon fa-brands fa-linkedin-in"></i></a>
+      <p class="footer-para">© Copyright JamWallet</p>
+      <br /><br />
+    </footer>
+    <script>
+        let account;
+        let ac;
+        // const connectMetamask = async () => {
+        //   if (window.ethereum !== "undefined") {
+        //     const accounts = await ethereum.request({
+        //       method: "eth_requestAccounts",
+        //     });
+        //     account = accounts[0];
+        //     //   document.getElementById("accountArea").innerHTML = account;
+        //     console.log(account);
+        //   };
+        // }
+        async function connectMetamask() {
+          if (window.ethereum !== "undefined") {
+            //   await window.ethereum.enable()
+            const accounts = await ethereum.request({
+              method: "eth_requestAccounts",
+            });
+            account = accounts[0];
+            console.log(account);
+            ac = account;
+            console.log(typeof account);
+          }
+          return account;
+        }
+
+        connectMetamask().then(function (value) {
+          document.getElementById("acnt").innerHTML = value;
+          connectContract();
+        });
+      
+        const connectContract = async () => {
+          // await window.ethereum.enable()
+          const ABI = [
+            {
+              inputs: [],
+              stateMutability: "nonpayable",
+              type: "constructor",
+            },
+            {
+              anonymous: false,
+              inputs: [
+                {
+                  indexed: true,
+                  internalType: "address",
+                  name: "tokenOwner",
+                  type: "address",
+                },
+                {
+                  indexed: true,
+                  internalType: "address",
+                  name: "spender",
+                  type: "address",
+                },
+                {
+                  indexed: false,
+                  internalType: "uint256",
+                  name: "tokens",
+                  type: "uint256",
+                },
+              ],
+              name: "Approval",
+              type: "event",
+            },
+            {
+              anonymous: false,
+              inputs: [
+                {
+                  indexed: true,
+                  internalType: "address",
+                  name: "from",
+                  type: "address",
+                },
+                {
+                  indexed: true,
+                  internalType: "address",
+                  name: "to",
+                  type: "address",
+                },
+                {
+                  indexed: false,
+                  internalType: "uint256",
+                  name: "tokens",
+                  type: "uint256",
+                },
+              ],
+              name: "Transfer",
+              type: "event",
+            },
+            {
+              inputs: [
+                {
+                  internalType: "address",
+                  name: "tokenOwner",
+                  type: "address",
+                },
+                {
+                  internalType: "address",
+                  name: "spender",
+                  type: "address",
+                },
+              ],
+              name: "allowance",
+              outputs: [
+                {
+                  internalType: "uint256",
+                  name: "noOfTokens",
+                  type: "uint256",
+                },
+              ],
+              stateMutability: "view",
+              type: "function",
+            },
+            {
+              inputs: [
+                {
+                  internalType: "address",
+                  name: "spender",
+                  type: "address",
+                },
+                {
+                  internalType: "uint256",
+                  name: "tokens",
+                  type: "uint256",
+                },
+              ],
+              name: "approve",
+              outputs: [
+                {
+                  internalType: "bool",
+                  name: "success",
+                  type: "bool",
+                },
+              ],
+              stateMutability: "nonpayable",
+              type: "function",
+            },
+            {
+              inputs: [
+                {
+                  internalType: "address",
+                  name: "",
+                  type: "address",
+                },
+              ],
+              name: "backup",
+              outputs: [
+                {
+                  internalType: "address",
+                  name: "",
+                  type: "address",
+                },
+              ],
+              stateMutability: "view",
+              type: "function",
+            },
+            {
+              inputs: [
+                {
+                  internalType: "address",
+                  name: "tokenOwner",
+                  type: "address",
+                },
+              ],
+              name: "balanceOf",
+              outputs: [
+                {
+                  internalType: "uint256",
+                  name: "balance",
+                  type: "uint256",
+                },
+              ],
+              stateMutability: "view",
+              type: "function",
+            },
+            {
+              inputs: [
+                {
+                  internalType: "address",
+                  name: "",
+                  type: "address",
+                },
+              ],
+              name: "balances",
+              outputs: [
+                {
+                  internalType: "uint256",
+                  name: "",
+                  type: "uint256",
+                },
+              ],
+              stateMutability: "view",
+              type: "function",
+            },
+            {
+              inputs: [
+                {
+                  internalType: "address",
+                  name: "main",
+                  type: "address",
+                },
+              ],
+              name: "burn",
+              outputs: [
+                {
+                  internalType: "bool",
+                  name: "success",
+                  type: "bool",
+                },
+              ],
+              stateMutability: "nonpayable",
+              type: "function",
+            },
+            {
+              inputs: [
+                {
+                  internalType: "uint256",
+                  name: "tokens",
+                  type: "uint256",
+                },
+              ],
+              name: "buyJams",
+              outputs: [
+                {
+                  internalType: "bool",
+                  name: "success",
+                  type: "bool",
+                },
+              ],
+              stateMutability: "payable",
+              type: "function",
+            },
+            {
+              inputs: [],
+              name: "decimal",
+              outputs: [
+                {
+                  internalType: "string",
+                  name: "",
+                  type: "string",
+                },
+              ],
+              stateMutability: "view",
+              type: "function",
+            },
+            {
+              inputs: [],
+              name: "founder",
+              outputs: [
+                {
+                  internalType: "address payable",
+                  name: "",
+                  type: "address",
+                },
+              ],
+              stateMutability: "view",
+              type: "function",
+            },
+            {
+              inputs: [
+                {
+                  internalType: "address",
+                  name: "main",
+                  type: "address",
+                },
+              ],
+              name: "getBackupAccount",
+              outputs: [
+                {
+                  internalType: "address",
+                  name: "backupAccount",
+                  type: "address",
+                },
+              ],
+              stateMutability: "view",
+              type: "function",
+            },
+            {
+              inputs: [
+                {
+                  internalType: "address",
+                  name: "",
+                  type: "address",
+                },
+              ],
+              name: "isBackup",
+              outputs: [
+                {
+                  internalType: "bool",
+                  name: "",
+                  type: "bool",
+                },
+              ],
+              stateMutability: "view",
+              type: "function",
+            },
+            {
+              inputs: [],
+              name: "name",
+              outputs: [
+                {
+                  internalType: "string",
+                  name: "",
+                  type: "string",
+                },
+              ],
+              stateMutability: "view",
+              type: "function",
+            },
+            {
+              inputs: [
+                {
+                  internalType: "address",
+                  name: "main",
+                  type: "address",
+                },
+                {
+                  internalType: "address",
+                  name: "backupAccount",
+                  type: "address",
+                },
+              ],
+              name: "setBackup",
+              outputs: [
+                {
+                  internalType: "bool",
+                  name: "success",
+                  type: "bool",
+                },
+              ],
+              stateMutability: "nonpayable",
+              type: "function",
+            },
+            {
+              inputs: [],
+              name: "symbol",
+              outputs: [
+                {
+                  internalType: "string",
+                  name: "",
+                  type: "string",
+                },
+              ],
+              stateMutability: "view",
+              type: "function",
+            },
+            {
+              inputs: [],
+              name: "totalSupply",
+              outputs: [
+                {
+                  internalType: "uint256",
+                  name: "",
+                  type: "uint256",
+                },
+              ],
+              stateMutability: "view",
+              type: "function",
+            },
+            {
+              inputs: [
+                {
+                  internalType: "address",
+                  name: "to",
+                  type: "address",
+                },
+                {
+                  internalType: "uint256",
+                  name: "tokens",
+                  type: "uint256",
+                },
+              ],
+              name: "transfer",
+              outputs: [
+                {
+                  internalType: "bool",
+                  name: "success",
+                  type: "bool",
+                },
+              ],
+              stateMutability: "nonpayable",
+              type: "function",
+            },
+            {
+              inputs: [
+                {
+                  internalType: "address",
+                  name: "from",
+                  type: "address",
+                },
+                {
+                  internalType: "address",
+                  name: "to",
+                  type: "address",
+                },
+                {
+                  internalType: "uint256",
+                  name: "tokens",
+                  type: "uint256",
+                },
+              ],
+              name: "transferFrom",
+              outputs: [
+                {
+                  internalType: "bool",
+                  name: "success",
+                  type: "bool",
+                },
+              ],
+              stateMutability: "nonpayable",
+              type: "function",
+            },
+          ];
+          const Address = "0xE9BFD60c16f954aA20059d5bdC3eFBF96f6C7cc7";
+          window.web3 = await new Web3(window.ethereum);
+
+          window.contract = await new window.web3.eth.Contract(ABI, Address);
+
+          // document.getElementById("contractArea").innerHTML =
+          //   "connected to smart contract";
+          console.log("connected");
+        };
+
+        const readContract = async () => {
+          // const
+          // const amount = document.getElementById("amount").value;
+          const data = await window.contract.methods
+            .buyJams(1)
+            .send({ from: account });
+
+          // const data2 = await window.contract.methods.burn(account).send({ from: account });
+          console.log(data);
+          // console.log(data2);
+          // document.getElementById("dataArea").innerHTML = data;
+        };
+
+        const balance = async () => {
+          // const
+          // const amount = document.getElementById("amount").value;
+          const data = await window.contract.methods
+            .balanceOf(account)
+            .call();
+
+          // const data2 = await window.contract.methods.burn(account).send({ from: account });
+          console.log(data);
+          document.getElementById("bal").innerHTML = data;
+          // console.log(data2);
+          // document.getElementById("dataArea").innerHTML = data;
+        };
+
+        function fun() {
+          connectMetamask();
+          connectContract();
+        }
+    </script>
+  </body>
+</html>
