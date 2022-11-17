@@ -1,905 +1,906 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Jam Wallet</title>
-    <!-- google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Ubuntu&display=swap"
-      rel="stylesheet"
-    />
 
-    <!-- font awesome -->
-    <script
-      src="https://kit.fontawesome.com/22563bbf83.js"
-      crossorigin="anonymous"
-    ></script>
+<head>
+  <meta charset="utf-8" />
+  <title>Jam Wallet</title>
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Ubuntu&display=swap"
+    rel="stylesheet" />
 
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.2.7-rc.0/web3.min.js"
-    ></script>
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/22563bbf83.js" crossorigin="anonymous"></script>
 
-    <!-- bootstrap CDN -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="/css/index.css" />
-  </head>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.2.7-rc.0/web3.min.js"></script>
 
-  <body>
-    <section id="title">
-      <div class="container-fluid">
-        <!-- Nav Bar -->
-        <nav class="navbar navbar-light navbar-expand-lg">
-          <a class="navbar-brand" href="" style="color: #fff">JamWallet</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarTogglerDemo01"
-            aria-controls="navbarTogglerDemo01"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="#features" style="color: #fff"
-                  >Features</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#abstract" style="color: #fff"
-                  >Abstract</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#jamcoin" style="color: #fff"
-                  >JamCoin</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  href="/"
-                  onclick="connectMetamask()"
-                  style="color: #fff"
-                  >Connect to Metamask</a
-                >
-              </li>
-              <li class="nav-item" id="bal">
-                <a
-                  class="nav-link active"
-                  href="/"
-                  onclick="balance()"
-                  style="color: #fff"
-                  >Balance</a
-                >
-              </li>
-            </ul>
-          </div>
-        </nav>
+  <!-- bootstrap CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+  <link rel="stylesheet" href="/css/index.css" />
+</head>
 
-        <!-- Title -->
+<body>
+  <section id="title">
+    <div class="container-fluid">
+      <!-- Nav Bar -->
+      <nav class="navbar navbar-light navbar-expand-lg">
+        <a class="navbar-brand" href="" style="color: #fff;font-family: 'Lucida Handwriting';">JamWallet</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+          aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#features" style="color: #fff">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#abstract" style="color: #fff">Abstract</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#jamcoin" style="color: #fff">JamCoin</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/" onclick="connectMetamask()" style="color: #fff">Connect to
+                Metamask</a>
+            </li>
+            <li class="nav-item" id="bal">
+              <a class="nav-link active" href="/" onclick="balance()" style="color: #fff">Balance</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
 
-        <div class="row">
-          <div class="col-lg-6">
-            <h1 class="main-heading">
-              Time to save your money through a friend.
-            </h1>
-            <button
-              type="button"
-              class="btn btn-dark btn-lg dw_button"
-              style="display: block"
-              id="transaction"
-              href="#"
-            >
+      <!-- Title -->
+
+      <div class="row">
+        <div class="col-lg-6">
+          <h1 class="main-heading">
+            Just a <i style="font-family: 'Lucida Handwriting';">Friend</i>ly crypto wallet.
+          </h1>
+          <a href="#buyJamCoin">
+            <button type="button" class="btn btn-primary btn-lg" id="t-x-n">
               Transaction
             </button>
-          </div>
-          <div class="creditCard">
-            <p id="acnt" style="margin-top: 5px; color: #fff"></p>
-            <i
-              class="icon fa-solid fa fa-bitcoin fa-4x"
-              style="color: #fff; margin-top: 15%; margin-left: 45%"
-            ></i>
-          </div>
+          </a>
+        </div>
+        <div class="creditCard">
+          <p id="acnt" style="margin-top: 5px; color: #fff"></p>
+          <img src="/logo.png" id="img-logo">
         </div>
       </div>
-    </section>
-
-    <!-- Features -->
-
-    <section id="features">
-      <div class="row">
-        <div class="ft col-lg-4">
-          <i class="icon fa-solid fa fa-bitcoin fa-4x"></i>
-          <h3>Buy JamCoin</h3>
-          <p>You can mint JamCoin for your account.</p>
-        </div>
-
-        <div class="ft col-lg-4">
-          <i class="icon fa-solid fa-credit-card fa-4x"></i>
-          <h3>Transaction</h3>
-          <p>You can make transaction with other blockchain users.</p>
-        </div>
-
-        <div class="ft col-lg-4">
-          <i class="icon fa-solid fa-handshake-angle fa-4x"></i>
-          <h3>Nominee System</h3>
-          <p>Find your Friend to entrust your money after wallet lock.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Abstarct -->
-
-    <section id="abstract">
-      <div
-        id="carouselExampleFade"
-        class="carousel slide carousel-dark"
-        data-bs-ride="carousel"
-      >
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <h2 class="abstract-text">
-              "There is roughly 3 trillion dollars in the blockchain out of
-              which 180 billion dollars are lost due to inaccessibility."
-            </h2>
-          </div>
-          <div class="carousel-item">
-            <h2 class="abstract-text">
-              "JamWallet not only makes it easier to get money back but is super
-              interactive with the user."
-            </h2>
-          </div>
-        </div>
-        <button
-          class="carousel-control-prev btn-light"
-          type="button"
-          data-bs-target="#carouselExampleFade"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-          class="carousel-control-next btn-light"
-          type="button"
-          data-bs-target="#carouselExampleFade"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-    </section>
-
-    <!-- JamCoin -->
-
-    <section id="jamcoin">
-      <div class="row">
-        <div class="ft col-lg-4">
-          <i class="icon fa-solid fa fa-money fa-4x"></i>
-          <h3>What is ERC20 Token?</h3>
-          <p>
-            It is the technical standard for fungible tokens created using the
-            Ethereum blockchain.
-          </p>
-        </div>
-
-        <div class="ft col-lg-4">
-          <i class="icon fa-solid fa fa-bitcoin fa-4x"></i>
-          <h3>What is JamCoin</h3>
-          <p>Our own fungible token for the utility of our users.</p>
-        </div>
-
-        <div class="ft col-lg-4">
-          <i class="icon fa-solid fas fa-donate fa-4x"></i>
-          <h3>Why JamCoin?</h3>
-          <p>
-            To give a community feel for all our users, where the utility is
-            measured on the happiness.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- info -->
-
-    <section id="info">
-      <div
-        id="carouselExampleFade"
-        class="carousel slide carousel-dark"
-        data-bs-ride="carousel"
-      >
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <h2 class="abstract-text">
-              "buyJamCoin function requires the number of coins to be minted
-              into the account."
-            </h2>
-          </div>
-          <div class="carousel-item">
-            <h2 class="abstract-text">
-              "Transaction function is a simple to and from transact of coins.
-              It requires the account to send to, the amount to be paid and
-              finally the message to be send."
-            </h2>
-          </div>
-          <div class="carousel-item">
-            <h2 class="abstract-text">
-              "Nominee system is the novel idea of our project. It requires the
-              main account, verification account and the time stamp value. After
-              the interval, there is no activity from the user, then the system
-              assumes the worst and moves the money from the main account to the
-              verification account."
-            </h2>
-          </div>
-        </div>
-        <button
-          class="carousel-control-prev btn-light"
-          type="button"
-          data-bs-target="#carouselExampleFade"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-          class="carousel-control-next btn-light"
-          type="button"
-          data-bs-target="#carouselExampleFade"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-    </section>
-
-    <!-- buyJamCoin -->
-
-    <section id="buyJamCoin">
-      <div class="row mb-3">
-        <label for="number-of-coins" class="col-sm-2 col-form-label"
-          >Enter Number of Coins:</label
-        >
-        <div class="col-sm-10">
-          <input type="number" class="form-control" id="JamCoin" />
-        </div>
-      </div>
-      <button
-        type="button"
-        class="btn btn-dark"
-        id="buyJamCoin"
-        onclick="readContract()"
-      >
-        Buy
-      </button>
-    </section>
-
-    <input type="text" id="bene" placeholder="Account to" /><br />
-    <input type="number" id="transferamount" placeholder="Amount" /><br />
-    <input type="text" id="msg" placeholder="Message" /><br />
-    <button type="button" id="transact" onclick="transfer()">Transaction</button
-    ><br />
-    <input
-      type="text"
-      id="nominee"
-      placeholder="Enter Verification Account"
-    /><br />
-    <input type="number" id="min" placeholder="Enter timer" /><br />
-    <button type="button" id="nominee" onclick="nominee()">Activate!!</button>
-    <button type="button" id="t" onclick="getTime()">get time!!</button>
-    <label id="sec">0</label><br>
-    <input type="text" id="mainAdd" placeholder="Lost account address" /><br />
-    <div style="text-align: center; padding-top: 15px;">
-      <button type="button" class="btn btn-primary" id="burn" onclick="burn()">Burn</button> 
     </div>
+  </section>
 
-    <!--footer-->
+  <!-- JamCoin -->
 
-    <footer id="footer">
-      <a href="/"><i class="footer-icon fa-brands fa-twitter"></i></a>
-      <a href="/"><i class="footer-icon fa-brands fa-instagram"></i></a>
-      <a href="/"><i class="footer-icon fa-brands fa-github"></i></a>
-      <a href="/"><i class="footer-icon fa-brands fa-linkedin-in"></i></a>
-      <p class="footer-para">© Copyright JamWallet</p>
-      <br /><br />
-    </footer>
-    <script>
-      let account;
-      let ac;
-      // const connectMetamask = async () => {
-      //   if (window.ethereum !== "undefined") {
-      //     const accounts = await ethereum.request({
-      //       method: "eth_requestAccounts",
-      //     });
-      //     account = accounts[0];
-      //     //   document.getElementById("accountArea").innerHTML = account;
-      //     console.log(account);
-      //   };
-      // }
-      async function connectMetamask() {
-        if (window.ethereum !== "undefined") {
-          //   await window.ethereum.enable()
-          const accounts = await ethereum.request({
-            method: "eth_requestAccounts",
-          });
-          account = accounts[0];
-          console.log(account);
-          ac = account;
-          console.log(typeof account);
+  <section id="jamcoin">
+    <div class="row">
+      <div class="ft col-lg-4">
+        <i class="icon fa-solid fa fa-money fa-4x"></i>
+        <h3>What is ERC20 Token?</h3>
+        <p>
+          It is the technical standard for fungible tokens created using the
+          Ethereum blockchain.
+        </p>
+      </div>
+
+      <div class="ft col-lg-4">
+        <i class="icon fa-solid fa fa-bitcoin fa-4x"></i>
+        <h3>What is JamCoin</h3>
+        <p>Our own fungible token for the utility of our users.</p>
+      </div>
+
+      <div class="ft col-lg-4">
+        <i class="icon fa-solid fas fa-donate fa-4x"></i>
+        <h3>Why JamCoin?</h3>
+        <p>
+          To give a community feel for all our users, where the utility is
+          measured on the happiness.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Abstarct -->
+
+  <section id="abstract">
+    <div id="carouselExampleFade" class="carousel slide carousel-dark" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <h2 class="abstract-text">
+            "There is roughly 3 trillion dollars in the blockchain out of
+            which 180 billion dollars are lost due to inaccessibility."
+          </h2>
+        </div>
+        <div class="carousel-item">
+          <h2 class="abstract-text">
+            "JamWallet not only makes it easier to get money back but is super
+            interactive with the user."
+          </h2>
+        </div>
+      </div>
+      <button class="carousel-control-prev btn-light" type="button" data-bs-target="#carouselExampleFade"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next btn-light" type="button" data-bs-target="#carouselExampleFade"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+
+
+  <!-- Features -->
+
+  <section id="features">
+    <div class="row">
+      <div class="ft col-lg-4">
+        <i class="icon fa-solid fa fa-bitcoin fa-4x"></i>
+        <h3>Buy JamCoin</h3>
+        <p>You can mint JamCoin for your account.</p>
+      </div>
+
+      <div class="ft col-lg-4">
+        <i class="icon fa-solid fa-credit-card fa-4x"></i>
+        <h3>Transaction</h3>
+        <p>You can make transaction with other blockchain users.</p>
+      </div>
+
+      <div class="ft col-lg-4">
+        <i class="icon fa-solid fa-handshake-angle fa-4x"></i>
+        <h3>Nominee System</h3>
+        <p>Find your Friend to entrust your money after wallet lock.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- info -->
+
+
+  <section id="info">
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+      <div class="accordion-item" id="acc-item">
+        <h2 class="accordion-header" id="flush-headingOne">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne" id="acc-btn">
+            <div style="text-align: center;">NOMINEE</div>
+          </button>
+        </h2>
+        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+          data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body"> Nominee system is the novel idea of our project. It requires the main account,
+            verification account and the time
+            stamp value. After the interval, there is no activity from the user, then the system assumes the worst and
+            moves the money from the main account to the verification account. </div>
+        </div>
+      </div>
+      <div class="accordion-item" id="acc-item">
+        <h2 class="accordion-header" id="flush-headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo" id="acc-btn">
+            <div style="text-align: center;">BUY JAM COIN</div>
+          </button>
+        </h2>
+        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+          data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">buyJamCoin function requires the number of coins to be minted into the account.
+          </div>
+        </div>
+        <div class="accordion-item" id="acc-item">
+          <h2 class="accordion-header" id="flush-headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree"
+              id="acc-btn">
+              <div style="text-align: center;">TRANSACTION</div>
+            </button>
+          </h2>
+          <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Transaction function is a simple to and from transact of coins. It requires the
+              account to send to, the amount to be paid and finally the message to be send.</div>
+          </div>
+        </div>
+  </section>
+
+  <!-- buyJamCoin -->
+
+  <section id="buyJamCoin" style="padding-bottom: 100px">
+    <div class="card">
+      <div class="container">
+        <h1 style="text-align: center; padding-bottom: 10px;">BUY JAM COIN</h1>
+        <div class="row mb-3" style="padding-left: 25%;">
+          <label for="number-of-coins" class="col-sm-2 col-form-label" style="padding-left: 0%">Enter Number of
+            Coins:</label>
+          <div class="col-sm-10">
+            <input type="number" class="form-control" id="JamCoin" />
+          </div>
+        </div>
+        <div style="text-align: center; padding: 15px">
+          <button type="button" class="btn btn-dark" id="JCOIN" onclick="readContract()"> Buy </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Transaction -->
+
+  <section id="transact" style="padding-bottom: 100px">
+    <div class="card">
+      <div class="container">
+        <h1 style="text-align: center; padding-bottom: 10px">TRANSACTION</h1>
+        <div class="row mb-3" style="padding-left: 25%">
+          <label for="number-of-coins" class="col-sm-2 col-form-label" style="padding-left: 0%">Account to:</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="bene" />
+          </div>
+        </div>
+        <div class="row mb-3" style="padding-left: 25%">
+          <label for="number-of-coins" class="col-sm-2 col-form-label" style="padding-left: 0%">Amount:</label>
+          <div class="col-sm-10">
+            <input type="number" class="form-control" id="transferamount" />
+          </div>
+        </div>
+        <div style="text-align: center; padding-top: 15px">
+          <button type="button" class="btn btn-dark" id="transact" onclick="transfer()">
+            Transact
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Nominee -->
+
+  <section id="nominee1" style="padding-bottom: 100px">
+    <div class="card">
+      <div class="container">
+        <h1 style="text-align: center; padding-bottom: 10px">NOMINEE</h1>
+        <div class="row mb-3" style="padding-left: 25%">
+          <label for="number-of-coins" class="col-sm-2 col-form-label" style="padding-left: 0%">Verification
+            Account:</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="nominee" />
+          </div>
+        </div>
+        <div class="row mb-3" style="padding-left: 25%">
+          <label for="number-of-coins" class="col-sm-2 col-form-label" style="padding-left: 0%">Time
+            Stamp(Minutes):</label>
+          <div class="col-sm-10">
+            <input type="number" class="form-control Timer" id="min" />
+          </div>
+        </div>
+        <div style="text-align: center; padding-top: 15px">
+          <button type="button" class="btn btn-dark" id="nomineebutton" onclick="nominee()">
+            Activate
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- timer -->
+  <div class="card">
+    <div class="container">
+      <div style="text-align: center; padding-top: 15px;">
+        <button type="button" class="btn btn-dark" id="t" onclick="getTime()">
+          Get time
+        </button>
+      </div>
+      <label for="time" class="col-sm-2 col-form-label" id="sec">0</label><br />
+      <div class="col-sm-10" style="margin-left: auto; margin-right: auto;">
+        <input type="text" id="mainAdd" placeholder="Lost account address" />
+      </div>
+      <div style="text-align: center; padding-top: 15px; padding-left: 45%;">
+        <button type="button" class="btn btn-primary" id="burn" onclick="burn()">
+          Burn
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!--footer-->
+
+  <footer id="footer">
+    <a href="/"><i class="footer-icon fa-brands fa-twitter" style="color: #fff"></i></a>
+    <a href="/"><i class="footer-icon fa-brands fa-instagram" style="color: #fff"></i></a>
+    <a href="/"><i class="footer-icon fa-brands fa-github" style="color: #fff"></i></a>
+    <a href="/"><i class="footer-icon fa-brands fa-linkedin-in" style="color: #fff"></i></a>
+    <p class="footer-para">© Copyright JamWallet</p>
+    <br /><br />
+  </footer>
+  <script>
+    let account;
+    let ac;
+    // const connectMetamask = async () => {
+    //   if (window.ethereum !== "undefined") {
+    //     const accounts = await ethereum.request({
+    //       method: "eth_requestAccounts",
+    //     });
+    //     account = accounts[0];
+    //     //   document.getElementById("accountArea").innerHTML = account;
+    //     console.log(account);
+    //   };
+    // }
+    async function connectMetamask() {
+      if (window.ethereum !== "undefined") {
+        //   await window.ethereum.enable()
+        const accounts = await ethereum.request({
+          method: "eth_requestAccounts",
+        });
+        account = accounts[0];
+        console.log(account);
+        ac = account;
+        console.log(typeof account);
+      }
+      return account;
+    }
+
+    connectMetamask().then(function (value) {
+      document.getElementById("acnt").innerHTML = value;
+      connectContract();
+    });
+
+    const connectContract = async () => {
+      // await window.ethereum.enable()
+      const ABI = [
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "tokenOwner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "spender",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "tokens",
+              "type": "uint256"
+            }
+          ],
+          "name": "Approval",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "tokens",
+              "type": "uint256"
+            }
+          ],
+          "name": "Transfer",
+          "type": "event"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "spender",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "tokens",
+              "type": "uint256"
+            }
+          ],
+          "name": "approve",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "success",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "main",
+              "type": "address"
+            }
+          ],
+          "name": "burn",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "success",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "tokens",
+              "type": "uint256"
+            }
+          ],
+          "name": "buyJams",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "success",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "payable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "main",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "backupAccount",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_timeLimit",
+              "type": "uint256"
+            }
+          ],
+          "name": "setBackup",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "success",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "tokens",
+              "type": "uint256"
+            }
+          ],
+          "name": "transfer",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "success",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "tokens",
+              "type": "uint256"
+            }
+          ],
+          "name": "transferFrom",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "success",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "constructor"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "tokenOwner",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "spender",
+              "type": "address"
+            }
+          ],
+          "name": "allowance",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "noOfTokens",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ],
+          "name": "backup",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "tokenOwner",
+              "type": "address"
+            }
+          ],
+          "name": "balanceOf",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "balance",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ],
+          "name": "balances",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "decimal",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "founder",
+          "outputs": [
+            {
+              "internalType": "address payable",
+              "name": "",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "main",
+              "type": "address"
+            }
+          ],
+          "name": "getBackupAccount",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "backupAccount",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "getTimer",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "timer",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ],
+          "name": "isBackup",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "lastUpdate",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "name",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "symbol",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "time_minutes",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "timeLimit",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "totalSupply",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
         }
-        return account;
+      ];
+      const Address = "0x8eaf8BD4CEc3348Fa8CA276AA99947e66257f6B0";
+      window.web3 = await new Web3(window.ethereum);
+
+      window.contract = await new window.web3.eth.Contract(ABI, Address);
+
+      // document.getElementById("contractArea").innerHTML =
+      //   "connected to smart contract";
+      console.log("connected");
+    }; 
+
+    const readContract = async () => {
+      // const
+      const amount = document.getElementById("JamCoin").value;
+      document.getElementById("JamCoin").value = "";
+      console.log(amount);
+      const data = await window.contract.methods
+        .buyJams(amount)
+        .send({ from: account });
+
+      // const data2 = await window.contract.methods.burn(account).send({ from: account });
+      console.log(data);
+      // console.log(data2);
+      // document.getElementById("dataArea").innerHTML = data;
+    };
+
+    const balance = async () => {
+      // const
+      // const amount = document.getElementById("amount").value;
+      const data = await window.contract.methods.balanceOf(account).call();
+
+      // const data2 = await window.contract.methods.burn(account).send({ from: account });
+      console.log(data);
+      document.getElementById("bal").innerHTML = data;
+      // console.log(data2);
+      // document.getElementById("dataArea").innerHTML = data;
+    };
+
+    const transfer = async () => {
+      // const
+      const bene = document.getElementById("bene").value;
+      document.getElementById("bene").value = "";
+      const amount = document.getElementById("transferamount").value;
+      document.getElementById("transferamount").value = "";
+      const data = await window.contract.methods
+        .transfer(bene, amount)
+        .send({ from: account });
+
+      // const data2 = await window.contract.methods.burn(account).send({ from: account });
+      console.log(data);
+      document.getElementById("bal").innerHTML = data;
+      // console.log(data2);
+      // document.getElementById("dataArea").innerHTML = data;
+    };
+
+    const nominee = async () => {
+      const nom = document.getElementById("nominee").value;
+      document.getElementById("nominee").value = "";
+      const min = document.getElementById("min").value;
+      document.getElementById("min").value = "";
+      const data = await window.contract.methods
+        .setBackup(account, nom, min)
+        .send({ from: account });
+      console.log(data);
+    };
+
+    const burn = async () => {
+      // const nom = document.getElementById("nominee").value;
+      // document.getElementById("nominee").value = "";
+      // const min = document.getElementById("min").value;
+      // document.getElementById("min").value = "";
+
+      const acc = "0xCC97587c54898601f77c14F5D6C79f52ab229CB6";
+      const data = await window.contract.methods
+        .burn(acc)
+        .send({ from: account });
+      console.log(data);
+    };
+
+    // document.getElementById("mainAdd").style.display = "none"
+    const getTime = async () => {
+      if (account.localeCompare("0xa777167c9C817B9AADfD80333B0Ad5A671F0a22e") == 0) {
+        console.log("same");
+        document.getElementById("burn").style.display = "block";
+        document.getElementById("mainAdd").style.display = "block"
+      }
+      if (account.localeCompare("0xCC97587c54898601f77c14F5D6C79f52ab229CB6") == 0) {
+        console.log("same");
+        document.getElementById("burn").style.display = "none";
+        document.getElementById("mainAdd").style.display = "none"
+
+
+      }
+      // console.log("called getTime");
+      const data = await window.contract.methods.getTimer().call();
+      // console.log(data);
+      let t = new Date().getTime();
+      var seconds = data - t / 1000;
+      document.getElementById("sec").innerHTML = Math.ceil(seconds);
+      // console.log(seconds)
+
+      if (seconds < 0) {
+        document.getElementById("sec").innerHTML = "00";
+        
+        return
       }
 
-      connectMetamask().then(function (value) {
-        document.getElementById("acnt").innerHTML = value;
-        connectContract();
-      });
+      setInterval(getTime(), 1000);
+    };
 
-      const connectContract = async () => {
-        // await window.ethereum.enable()
-        const ABI = [
-          {
-            anonymous: false,
-            inputs: [
-              {
-                indexed: true,
-                internalType: "address",
-                name: "tokenOwner",
-                type: "address",
-              },
-              {
-                indexed: true,
-                internalType: "address",
-                name: "spender",
-                type: "address",
-              },
-              {
-                indexed: false,
-                internalType: "uint256",
-                name: "tokens",
-                type: "uint256",
-              },
-            ],
-            name: "Approval",
-            type: "event",
-          },
-          {
-            anonymous: false,
-            inputs: [
-              {
-                indexed: true,
-                internalType: "address",
-                name: "from",
-                type: "address",
-              },
-              {
-                indexed: true,
-                internalType: "address",
-                name: "to",
-                type: "address",
-              },
-              {
-                indexed: false,
-                internalType: "uint256",
-                name: "tokens",
-                type: "uint256",
-              },
-            ],
-            name: "Transfer",
-            type: "event",
-          },
-          {
-            inputs: [
-              {
-                internalType: "address",
-                name: "spender",
-                type: "address",
-              },
-              {
-                internalType: "uint256",
-                name: "tokens",
-                type: "uint256",
-              },
-            ],
-            name: "approve",
-            outputs: [
-              {
-                internalType: "bool",
-                name: "success",
-                type: "bool",
-              },
-            ],
-            stateMutability: "nonpayable",
-            type: "function",
-          },
-          {
-            inputs: [
-              {
-                internalType: "address",
-                name: "main",
-                type: "address",
-              },
-            ],
-            name: "burn",
-            outputs: [
-              {
-                internalType: "bool",
-                name: "success",
-                type: "bool",
-              },
-            ],
-            stateMutability: "nonpayable",
-            type: "function",
-          },
-          {
-            inputs: [
-              {
-                internalType: "uint256",
-                name: "tokens",
-                type: "uint256",
-              },
-            ],
-            name: "buyJams",
-            outputs: [
-              {
-                internalType: "bool",
-                name: "success",
-                type: "bool",
-              },
-            ],
-            stateMutability: "payable",
-            type: "function",
-          },
-          {
-            inputs: [
-              {
-                internalType: "address",
-                name: "main",
-                type: "address",
-              },
-              {
-                internalType: "address",
-                name: "backupAccount",
-                type: "address",
-              },
-              {
-                internalType: "uint256",
-                name: "_timeLimit",
-                type: "uint256",
-              },
-            ],
-            name: "setBackup",
-            outputs: [
-              {
-                internalType: "bool",
-                name: "success",
-                type: "bool",
-              },
-            ],
-            stateMutability: "nonpayable",
-            type: "function",
-          },
-          {
-            inputs: [
-              {
-                internalType: "address",
-                name: "to",
-                type: "address",
-              },
-              {
-                internalType: "uint256",
-                name: "tokens",
-                type: "uint256",
-              },
-            ],
-            name: "transfer",
-            outputs: [
-              {
-                internalType: "bool",
-                name: "success",
-                type: "bool",
-              },
-            ],
-            stateMutability: "nonpayable",
-            type: "function",
-          },
-          {
-            inputs: [
-              {
-                internalType: "address",
-                name: "from",
-                type: "address",
-              },
-              {
-                internalType: "address",
-                name: "to",
-                type: "address",
-              },
-              {
-                internalType: "uint256",
-                name: "tokens",
-                type: "uint256",
-              },
-            ],
-            name: "transferFrom",
-            outputs: [
-              {
-                internalType: "bool",
-                name: "success",
-                type: "bool",
-              },
-            ],
-            stateMutability: "nonpayable",
-            type: "function",
-          },
-          {
-            inputs: [],
-            stateMutability: "nonpayable",
-            type: "constructor",
-          },
-          {
-            inputs: [
-              {
-                internalType: "address",
-                name: "tokenOwner",
-                type: "address",
-              },
-              {
-                internalType: "address",
-                name: "spender",
-                type: "address",
-              },
-            ],
-            name: "allowance",
-            outputs: [
-              {
-                internalType: "uint256",
-                name: "noOfTokens",
-                type: "uint256",
-              },
-            ],
-            stateMutability: "view",
-            type: "function",
-          },
-          {
-            inputs: [
-              {
-                internalType: "address",
-                name: "",
-                type: "address",
-              },
-            ],
-            name: "backup",
-            outputs: [
-              {
-                internalType: "address",
-                name: "",
-                type: "address",
-              },
-            ],
-            stateMutability: "view",
-            type: "function",
-          },
-          {
-            inputs: [
-              {
-                internalType: "address",
-                name: "tokenOwner",
-                type: "address",
-              },
-            ],
-            name: "balanceOf",
-            outputs: [
-              {
-                internalType: "uint256",
-                name: "balance",
-                type: "uint256",
-              },
-            ],
-            stateMutability: "view",
-            type: "function",
-          },
-          {
-            inputs: [
-              {
-                internalType: "address",
-                name: "",
-                type: "address",
-              },
-            ],
-            name: "balances",
-            outputs: [
-              {
-                internalType: "uint256",
-                name: "",
-                type: "uint256",
-              },
-            ],
-            stateMutability: "view",
-            type: "function",
-          },
-          {
-            inputs: [],
-            name: "decimal",
-            outputs: [
-              {
-                internalType: "string",
-                name: "",
-                type: "string",
-              },
-            ],
-            stateMutability: "view",
-            type: "function",
-          },
-          {
-            inputs: [],
-            name: "founder",
-            outputs: [
-              {
-                internalType: "address payable",
-                name: "",
-                type: "address",
-              },
-            ],
-            stateMutability: "view",
-            type: "function",
-          },
-          {
-            inputs: [
-              {
-                internalType: "address",
-                name: "main",
-                type: "address",
-              },
-            ],
-            name: "getBackupAccount",
-            outputs: [
-              {
-                internalType: "address",
-                name: "backupAccount",
-                type: "address",
-              },
-            ],
-            stateMutability: "view",
-            type: "function",
-          },
-          {
-            inputs: [],
-            name: "getTimer",
-            outputs: [
-              {
-                internalType: "uint256",
-                name: "timer",
-                type: "uint256",
-              },
-            ],
-            stateMutability: "view",
-            type: "function",
-          },
-          {
-            inputs: [
-              {
-                internalType: "address",
-                name: "",
-                type: "address",
-              },
-            ],
-            name: "isBackup",
-            outputs: [
-              {
-                internalType: "bool",
-                name: "",
-                type: "bool",
-              },
-            ],
-            stateMutability: "view",
-            type: "function",
-          },
-          {
-            inputs: [],
-            name: "lastUpdate",
-            outputs: [
-              {
-                internalType: "uint256",
-                name: "",
-                type: "uint256",
-              },
-            ],
-            stateMutability: "view",
-            type: "function",
-          },
-          {
-            inputs: [],
-            name: "name",
-            outputs: [
-              {
-                internalType: "string",
-                name: "",
-                type: "string",
-              },
-            ],
-            stateMutability: "view",
-            type: "function",
-          },
-          {
-            inputs: [],
-            name: "symbol",
-            outputs: [
-              {
-                internalType: "string",
-                name: "",
-                type: "string",
-              },
-            ],
-            stateMutability: "view",
-            type: "function",
-          },
-          {
-            inputs: [],
-            name: "time_minutes",
-            outputs: [
-              {
-                internalType: "uint256",
-                name: "",
-                type: "uint256",
-              },
-            ],
-            stateMutability: "view",
-            type: "function",
-          },
-          {
-            inputs: [],
-            name: "timeLimit",
-            outputs: [
-              {
-                internalType: "uint256",
-                name: "",
-                type: "uint256",
-              },
-            ],
-            stateMutability: "view",
-            type: "function",
-          },
-          {
-            inputs: [],
-            name: "totalSupply",
-            outputs: [
-              {
-                internalType: "uint256",
-                name: "",
-                type: "uint256",
-              },
-            ],
-            stateMutability: "view",
-            type: "function",
-          },
-        ];
-        const Address = "0xb953aCacA8C7E8b4F92B2E66e3a3E57C361Caa8B";
-        window.web3 = await new Web3(window.ethereum);
+    function fun() {
+      setInterval(getTime(), 1000);
+    }
+  </script>
+</body>
 
-        window.contract = await new window.web3.eth.Contract(ABI, Address);
-
-        // document.getElementById("contractArea").innerHTML =
-        //   "connected to smart contract";
-        console.log("connected");
-      };
-
-      const readContract = async () => {
-        // const
-        const amount = document.getElementById("JamCoin").value;
-        document.getElementById("JamCoin").value = "";
-        console.log(amount);
-        const data = await window.contract.methods
-          .buyJams(amount)
-          .send({ from: account });
-
-        // const data2 = await window.contract.methods.burn(account).send({ from: account });
-        console.log(data);
-        // console.log(data2);
-        // document.getElementById("dataArea").innerHTML = data;
-      };
-
-      const balance = async () => {
-        // const
-        // const amount = document.getElementById("amount").value;
-        const data = await window.contract.methods.balanceOf(account).call();
-
-        // const data2 = await window.contract.methods.burn(account).send({ from: account });
-        console.log(data);
-        document.getElementById("bal").innerHTML = data;
-        // console.log(data2);
-        // document.getElementById("dataArea").innerHTML = data;
-      };
-
-      const transfer = async () => {
-        // const
-        const bene = document.getElementById("bene").value;
-        document.getElementById("bene").value = "";
-        const amount = document.getElementById("transferamount").value;
-        document.getElementById("transferamount").value = "";
-        const msg = document.getElementById("msg").value;
-        document.getElementById("msg").value = "";
-        const data = await window.contract.methods
-          .transfer(bene, amount)
-          .send({ from: account });
-
-        // const data2 = await window.contract.methods.burn(account).send({ from: account });
-        console.log(data);
-        document.getElementById("bal").innerHTML = data;
-        // console.log(data2);
-        // document.getElementById("dataArea").innerHTML = data;
-      };
-
-      const nominee = async () => {
-        const nom = document.getElementById("nominee").value;
-        document.getElementById("nominee").value = "";
-        const min = document.getElementById("min").value;
-        document.getElementById("min").value = "";
-        const data = await window.contract.methods
-          .setBackup(account, nom, min)
-          .send({ from: account });
-        console.log(data);
-      };
-
-      const burn = async () => {
-        // const nom = document.getElementById("nominee").value;
-        // document.getElementById("nominee").value = "";
-        // const min = document.getElementById("min").value;
-        // document.getElementById("min").value = "";
-        
-        const data = await window.contract.methods
-          .burn("")
-          .send({ from: account });
-        console.log(data);
-      };
-
-      const getTime = async () => {
-        console.log("called getTime");
-        const data = await window.contract.methods.getTimer().call();
-        // console.log(data);
-        let t = new Date().getTime();
-        var seconds = data- t / 1000 ;
-        document.getElementById("sec").innerHTML = Math.ceil(seconds);
-        // console.log(seconds)
-        if(seconds<0){
-          document.getElementById("sec").innerHTML = "00"
-          document.getElementById("burn").style.display = "block";
-          const add = document.getElementById("mainAdd").value
-          if(add){
-
-            const data = await window.contract.methods.burn(add).send({from: account});
-            console.log(data)
-          }
-
-
-        }
-        setInterval(getTime(),1000);
-      };
-
-      
-
-
-      function fun() {
-        setInterval(getTime(),1000);
-      };
-    </script>
-  </body>
 </html>

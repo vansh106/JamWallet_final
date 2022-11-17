@@ -124,7 +124,7 @@ nav {
 }
 
 #burn {
-    display: none;
+    display: block;
 }
 
 #info {
@@ -146,8 +146,33 @@ nav {
 }
 
 #jamcoin {
-    padding: 7% 15%;
+    padding: 7% 8%;
     position: relative;
+}
+
+#JamCoin {
+    width: 25%; 
+    margin:  0% 5%;
+}
+
+#bene {
+    width: 25%; 
+    margin:  0% 5%;
+}
+
+#transferamount {
+    width: 25%; 
+    margin:  0% 5%;
+}
+
+#nominee {
+    width: 25%; 
+   margin:  0% 5%;
+}
+
+#min{
+    width: 25%; 
+   margin:  0% 5%;
 }
 
 .carousel-item {
@@ -193,9 +218,22 @@ nav {
 /* Footer */
 
 #footer {
+    background: linear-gradient(-45deg, #000089, black, black, #000089);
+    background-size: 400% 400%;
+    animation: gradient 4s ease infinite;
+    color:#fff;
     padding: 2% 15%;
-
-
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .footer-icon {
@@ -224,4 +262,68 @@ nav {
     .btn {
         font-size: 75%;
     }
+}
+
+#acc-item {
+    background: linear-gradient(-45deg, #000089, black, black, #000089);
+    background-size: 400% 400%;
+    animation: gradient 4s ease infinite;
+    align-items: center;
+    color:#fff;
+    border: none;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+#acc-btn {
+    background: linear-gradient(-45deg, #000089, black, black, #000089);
+    background-size: 400% 400%;
+    animation: gradient 4s ease infinite;
+    align-items: center;
+    color:#fff;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+#t-x-n {
+    background: linear-gradient(-35deg, rgb(25, 140, 247), #fc3c68);
+}
+
+#img-logo {
+    padding-left: 38%;
+    padding-top: 13%;
+}   
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
